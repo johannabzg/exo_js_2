@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body onload="alert('bienvenue !');">
+                      <!-- EXO 1 -->
+      <img src="image1.jpg" onmouseover="this.src='image1_2.jpg';" onmouseout="this.src='image1.jpg';" id="image1" />
+                      <!-- EXO 2 -->
+      <form id="truc">
+         <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom"/>
+      </form>
+                      <!-- EXO 3 -->
+      <form id="truc2">
+        <label for="nom">Votre nom  : </label><input type="text" name="nom" value="" id="nom2"/>
+      </form>
+                      <!-- EXO 5 -->
+      <form id="truc3">
+         <label for="nom">Votre nom  : </label><input type="text" name="nom" value="Doe" id="nome" />
+         <label for="prenom">Votre prenom  : </label><input type="text" name="prenom" value="John" id="prenome" />
+         <label for="ville">Votre ville  : </label><input type="text" name="ville" value="New York" id="ville" />
+         <button onclick="effac()" type="button" name="button">RAZ</button>
+      </form>
+                      <!-- EXO 6 -->
+      <div class="conteneur">
+          <img src="image1.jpg" onmouseover="this.src='image1_2.jpg';" onmouseout="this.src='image1.jpg';" id="image1" />
+          <img src="image2.jpg" onmouseover="this.src='image2_2.jpg';" onmouseout="this.src='image2.jpg';" id="image2" />
+          <img src="image3.jpg" onmouseover="this.src='image3_2.jpg';" onmouseout="this.src='image3.jpg';" id="image3" />
+          <img src="image4.jpg" onmouseover="this.src='image4_2.jpg';" onmouseout="this.src='image4.jpg';" id="image4" />
+          <img src="image5.jpg" onmouseover="this.src='image5_2.jpg';" onmouseout="this.src='image5.jpg';" id="image5" />
+     </div>
+
+
+                       <!-- SCRIPT -->
+      <script>
+         var form = document.getElementById('truc');
+         form.addEventListener("blur", focusfonction, true);
+
+               function focusfonction() {
+                     var nom = document.getElementById('nom').value;
+                    alert('thanks for participate !')
+         };
+
+         var form = document.getElementById('truc2');
+         form.addEventListener('keypress', fonctionpress);
+
+                function fonctionpress(){
+                    var nom2 = document.getElementById('nom2').value;
+                    alert('vous venez d\'ecrire :'+nom2)
+         };
+
+         function effac() {
+           var nom = document.getElementById('nome');
+           var prenom = document.getElementById('prenome');
+           var ville = document.getElementById('ville');
+           nom.value="";
+           prenom.value="";
+           ville.value="";
+             alert('effacer avec succès')
+
+         };
+
+
+    </script>
+  </body>
+</html>
